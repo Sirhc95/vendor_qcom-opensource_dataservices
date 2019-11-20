@@ -414,7 +414,7 @@ static int rmnet_api_call(int argc, char *argv[])
 			return_code = rtrmnet_set_uplink_aggregation_params(
 				handle, argv[1], argv[2], _STRTOUI8(argv[3]),
 				_STRTOUI16(argv[4]), _STRTOUI32(argv[5]),
-				&error_number);
+				_STRTOUI8(argv[6]), &error_number);
 		}
 		else if (!strcmp(*argv, "flowactivate")) {
 			_RMNETCLI_CHECKNULL(argv[1]);
